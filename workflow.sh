@@ -270,3 +270,23 @@ multiBamSummary bins --bamfiles \
 --labels \
 16_p1 16_p2 16_p3 18_p1 18_p2 18_p3 19_p1 19_p2 19_p3 20_p1 20_p2 20_p3 22_p1 22_p2 22_p3 \
 -p 24 -o ../../pca/s68-noold.npz
+
+# 15. PCA plots
+
+plotPCA -in s68.npz \
+-l \
+16_p1 16_p2 16_p3 18_p1 18_p2 18_p3 19_p1 19_p2 19_p3 20_p1 20_p2 20_p3 22_p1 22_p2 22_p3 hds1 \
+--colors \
+'#66ff66' '#33cc33' '#009933' '#6699ff' '#3366ff' '#3333ff' '#ff66ff' '#ff00ff' '#cc00cc' '#ff6666' '#ff5050' '#cc0000' '#ffff00' '#cc9900' '#996633' '#000000' \
+--markers \
+'o' \
+--transpose --plotHeight 20 --plotWidth 20 -o s68.svg
+
+plotPCA -in s68-noold.npz \
+-l \
+16_p1 16_p2 16_p3 18_p1 18_p2 18_p3 19_p1 19_p2 19_p3 20_p1 20_p2 20_p3 22_p1 22_p2 22_p3 \
+--colors \
+'#33cc33' '#33cc33' '#33cc33' '#3366ff' '#3366ff' '#3366ff' '#ff00ff' '#ff00ff' '#ff00ff' '#ff5050' '#ff5050' '#ff5050' '#cccc00' '#cccc00' '#cccc00' \
+--markers \
+'o' 'x' 'v' \
+--transpose --plotHeight 20 --plotWidth 20 -o s68noold.svg
